@@ -1,6 +1,6 @@
 <template>
-    <div>
-        <dischi-box
+    <div class="container">
+        <dischi-box 
          v-for="disco in dischi"
         :key="disco.id" 
         :disco="disco"/>
@@ -21,5 +21,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 1000px;
+    margin: 0px auto;    
+}
 </style>

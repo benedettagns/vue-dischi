@@ -1,7 +1,7 @@
 <template>
-    <div>
+    <div class="dischi-box">
         <img :src="disco.poster" alt="">
-        <p>{{disco.title}}</p>
+        <p class="transform">{{disco.title}}</p>
         <p> {{disco.author}} </p>
         <p> {{disco.year}} </p>
     </div>
