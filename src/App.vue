@@ -2,7 +2,7 @@
   <div id="app">
     <header-box/>
     <select-box @select="selectGenre"/>
-    <main-container :dischi="dischi"/>
+    <main-container :dischi="genere"/>
   </div>
 </template>
 
@@ -33,12 +33,12 @@ export default {
   },
 
   methods:{
-    selectGenre(selezioneGenere) {
-      this.genere= this.dischi.filter((generi) => {
-        return generi.genre.includes(selezioneGenere)
+    selectGenre(genre) {
+      this.genere = this.dischi.filter((generi) => {
+        return generi.genre.toLowerCase() === genre || genre === 'all';
       })
     }
-  } 
+  }
 }
 </script>
 

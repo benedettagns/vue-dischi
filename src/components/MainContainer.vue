@@ -1,8 +1,8 @@
 <template>
     <div class="container">
         <dischi-box 
-         v-for="disco in dischi"
-        :key="disco.id" 
+         v-for="(disco, index) in dischi"
+        :key="index" 
         :disco="disco"/>
     </div>
 </template>
